@@ -27,14 +27,6 @@ class BaidumusicSpider(scrapy.Spider):
                 meta={'item':item},
                 callback=self.parse_singer
             )
-        # urls = ['http://music.taihe.com/artist/1968','http://music.taihe.com/artist/340277196']
-        # for url in urls:
-        #     item = BaidumusicItem()
-        #     yield scrapy.Request(
-        #         url,
-        #         meta={'item':item},
-        #         callback=self.parse_singer
-        #     )
 
     '''@staticmethod 静态方法只是名义上归属类管理，但是不能使用类变量和实例变量，是类的工具包放在函数前（该函数不传入self或者cls），所以不能访问类属性和实例属性
         random.random()方法返回一个随机数，其在0至1的范围之内'''
@@ -80,13 +72,6 @@ class BaidumusicSpider(scrapy.Spider):
                     meta={'item':item},
                     callback=self.get_album
                 )
-        # for start in range(0,23,12):
-        #     url = 'http://music.taihe.com/data/user/getalbums?start={}&size=12&ting_uid={}&order=time&.r={}'.format(str(start),id,self._r())
-        #     yield scrapy.Request(
-        #         url,
-        #         meta={'item':item},
-        #         callback=self.get_album
-        #     )
 
     '''获取该歌手的每一张专辑'''
     def get_album(self,response):
