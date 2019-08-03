@@ -1,0 +1,24 @@
+所有歌手名字：//div[@class="main-body "]/ul/li[position()>1]/ul/li/a/@title
+歌手页面链接：//div[@class="main-body "]/ul/li[position()>1]/ul/li/a/@href
+歌手的专辑是动态加载的页面
+抓包抓取每一页专辑的url地址分析url地址以及要传的参数
+第一页：
+Request URL: http://music.taihe.com/data/user/getalbums?
+start=0&size=12&ting_uid=1968
+&order=time&.r=0.60167921229123511564609469232
+start: 0
+size: 12
+ting_uid: 1968
+order: time
+.r: 0.60167921229123511564609469232
+
+第二页：
+Request URL:
+http://music.taihe.com/data/user/getalbums?
+start=12&size=12&ting_uid=1968&order=time
+&.r=0.67199835169301371564609262414
+start: 12
+size: 12
+ting_uid: 1968
+order: time
+.r: 0.67199835169301371564609262414
